@@ -32,10 +32,28 @@ public class UserLog {
     private String userLogContent;
 
     /**
-     * 积分变动数值或粮食变动数值
+     * 存粮净重
+     */
+    @Column(name = "`user_log_suttle`")
+    private Double userLogSuttle;
+
+    /**
+     * 积分变动数值或粮食结算数量
      */
     @Column(name = "`user_log_number`")
     private Double userLogNumber;
+
+    /**
+     * 粮食含水量
+     */
+    @Column(name = "`user_log_foodwatercontent`")
+    private Integer userLogFoodwatercontent;
+
+    /**
+     * 粮食金额金额
+     */
+    @Column(name = "`user_log_money`")
+    private Double userLogMoney;
 
     /**
      *  1提粮 2存粮 3提现 4积分获得 5积分兑换 
@@ -116,21 +134,75 @@ public class UserLog {
     }
 
     /**
-     * 获取积分变动数值或粮食变动数值
+     * 获取存粮净重
      *
-     * @return user_log_number - 积分变动数值或粮食变动数值
+     * @return user_log_suttle - 存粮净重
+     */
+    public Double getUserLogSuttle() {
+        return userLogSuttle;
+    }
+
+    /**
+     * 设置存粮净重
+     *
+     * @param userLogSuttle 存粮净重
+     */
+    public void setUserLogSuttle(Double userLogSuttle) {
+        this.userLogSuttle = userLogSuttle;
+    }
+
+    /**
+     * 获取积分变动数值或粮食结算数量
+     *
+     * @return user_log_number - 积分变动数值或粮食结算数量
      */
     public Double getUserLogNumber() {
         return userLogNumber;
     }
 
     /**
-     * 设置积分变动数值或粮食变动数值
+     * 设置积分变动数值或粮食结算数量
      *
-     * @param userLogNumber 积分变动数值或粮食变动数值
+     * @param userLogNumber 积分变动数值或粮食结算数量
      */
     public void setUserLogNumber(Double userLogNumber) {
         this.userLogNumber = userLogNumber;
+    }
+
+    /**
+     * 获取粮食含水量
+     *
+     * @return user_log_foodwatercontent - 粮食含水量
+     */
+    public Integer getUserLogFoodwatercontent() {
+        return userLogFoodwatercontent;
+    }
+
+    /**
+     * 设置粮食含水量
+     *
+     * @param userLogFoodwatercontent 粮食含水量
+     */
+    public void setUserLogFoodwatercontent(Integer userLogFoodwatercontent) {
+        this.userLogFoodwatercontent = userLogFoodwatercontent;
+    }
+
+    /**
+     * 获取粮食金额金额
+     *
+     * @return user_log_money - 粮食金额金额
+     */
+    public Double getUserLogMoney() {
+        return userLogMoney;
+    }
+
+    /**
+     * 设置粮食金额金额
+     *
+     * @param userLogMoney 粮食金额金额
+     */
+    public void setUserLogMoney(Double userLogMoney) {
+        this.userLogMoney = userLogMoney;
     }
 
     /**

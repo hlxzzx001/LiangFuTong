@@ -32,10 +32,16 @@ public class UserSavefood {
     private String foodName;
 
     /**
+     * 粮食id
+     */
+    @Column(name = "`food_id`")
+    private String foodId;
+
+    /**
      * 粮食类型
      */
     @Column(name = "`food_type`")
-    private Integer foodType;
+    private String foodType;
 
     /**
      * 提现金额
@@ -44,7 +50,7 @@ public class UserSavefood {
     private Double foodCarrycash;
 
     /**
-     * 提粮数量
+     * 数量
      */
     @Column(name = "`food_carrynumber`")
     private Double foodCarrynumber;
@@ -56,7 +62,7 @@ public class UserSavefood {
     private Double userSavefoodPrice;
 
     /**
-     * 存粮时间
+     * 时间
      */
     @Column(name = "`user_savefood_time`")
     private Date userSavefoodTime;
@@ -72,6 +78,12 @@ public class UserSavefood {
      */
     @Column(name = "`user_savefood_status`")
     private Integer userSavefoodStatus;
+
+    /**
+     * 管理员id
+     */
+    @Column(name = "`admin_id`")
+    private Integer adminId;
 
     /**
      * 获取用户存粮id
@@ -146,11 +158,29 @@ public class UserSavefood {
     }
 
     /**
+     * 获取粮食id
+     *
+     * @return food_id - 粮食id
+     */
+    public String getFoodId() {
+        return foodId;
+    }
+
+    /**
+     * 设置粮食id
+     *
+     * @param foodId 粮食id
+     */
+    public void setFoodId(String foodId) {
+        this.foodId = foodId;
+    }
+
+    /**
      * 获取粮食类型
      *
      * @return food_type - 粮食类型
      */
-    public Integer getFoodType() {
+    public String getFoodType() {
         return foodType;
     }
 
@@ -159,7 +189,7 @@ public class UserSavefood {
      *
      * @param foodType 粮食类型
      */
-    public void setFoodType(Integer foodType) {
+    public void setFoodType(String foodType) {
         this.foodType = foodType;
     }
 
@@ -182,18 +212,18 @@ public class UserSavefood {
     }
 
     /**
-     * 获取提粮数量
+     * 获取数量
      *
-     * @return food_carrynumber - 提粮数量
+     * @return food_carrynumber - 数量
      */
     public Double getFoodCarrynumber() {
         return foodCarrynumber;
     }
 
     /**
-     * 设置提粮数量
+     * 设置数量
      *
-     * @param foodCarrynumber 提粮数量
+     * @param foodCarrynumber 数量
      */
     public void setFoodCarrynumber(Double foodCarrynumber) {
         this.foodCarrynumber = foodCarrynumber;
@@ -218,18 +248,18 @@ public class UserSavefood {
     }
 
     /**
-     * 获取存粮时间
+     * 获取时间
      *
-     * @return user_savefood_time - 存粮时间
+     * @return user_savefood_time - 时间
      */
     public Date getUserSavefoodTime() {
         return userSavefoodTime;
     }
 
     /**
-     * 设置存粮时间
+     * 设置时间
      *
-     * @param userSavefoodTime 存粮时间
+     * @param userSavefoodTime 时间
      */
     public void setUserSavefoodTime(Date userSavefoodTime) {
         this.userSavefoodTime = userSavefoodTime;
@@ -269,5 +299,23 @@ public class UserSavefood {
      */
     public void setUserSavefoodStatus(Integer userSavefoodStatus) {
         this.userSavefoodStatus = userSavefoodStatus;
+    }
+
+    /**
+     * 获取管理员id
+     *
+     * @return admin_id - 管理员id
+     */
+    public Integer getAdminId() {
+        return adminId;
+    }
+
+    /**
+     * 设置管理员id
+     *
+     * @param adminId 管理员id
+     */
+    public void setAdminId(Integer adminId) {
+        this.adminId = adminId;
     }
 }

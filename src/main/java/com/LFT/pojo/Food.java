@@ -13,16 +13,10 @@ public class Food {
     private Integer foodId;
 
     /**
-     * 粮食名称
+     * 粮食自定义名称
      */
     @Column(name = "`food_name`")
     private String foodName;
-
-    /**
-     * 粮食库存
-     */
-    @Column(name = "`food_repertory`")
-    private Double foodRepertory;
 
     /**
      * 粮食现金汇率
@@ -43,16 +37,28 @@ public class Food {
     private Integer foodType;
 
     /**
+     * 粮食类别（二级分类）
+     */
+    @Column(name = "`food_category`")
+    private String foodCategory;
+
+    /**
+     * 粮食等级（三级分类）
+     */
+    @Column(name = "`food_level`")
+    private String foodLevel;
+
+    /**
+     * 粮食含水量
+     */
+    @Column(name = "`food_watercontent`")
+    private Integer foodWatercontent;
+
+    /**
      * 粮食价格
      */
     @Column(name = "`food_price`")
     private Double foodPrice;
-
-    /**
-     * 粮食所属门店
-     */
-    @Column(name = "`food_store`")
-    private String foodStore;
 
     /**
      * 获取粮食id
@@ -73,39 +79,21 @@ public class Food {
     }
 
     /**
-     * 获取粮食名称
+     * 获取粮食自定义名称
      *
-     * @return food_name - 粮食名称
+     * @return food_name - 粮食自定义名称
      */
     public String getFoodName() {
         return foodName;
     }
 
     /**
-     * 设置粮食名称
+     * 设置粮食自定义名称
      *
-     * @param foodName 粮食名称
+     * @param foodName 粮食自定义名称
      */
     public void setFoodName(String foodName) {
         this.foodName = foodName;
-    }
-
-    /**
-     * 获取粮食库存
-     *
-     * @return food_repertory - 粮食库存
-     */
-    public Double getFoodRepertory() {
-        return foodRepertory;
-    }
-
-    /**
-     * 设置粮食库存
-     *
-     * @param foodRepertory 粮食库存
-     */
-    public void setFoodRepertory(Double foodRepertory) {
-        this.foodRepertory = foodRepertory;
     }
 
     /**
@@ -163,6 +151,60 @@ public class Food {
     }
 
     /**
+     * 获取粮食类别（二级分类）
+     *
+     * @return food_category - 粮食类别（二级分类）
+     */
+    public String getFoodCategory() {
+        return foodCategory;
+    }
+
+    /**
+     * 设置粮食类别（二级分类）
+     *
+     * @param foodCategory 粮食类别（二级分类）
+     */
+    public void setFoodCategory(String foodCategory) {
+        this.foodCategory = foodCategory;
+    }
+
+    /**
+     * 获取粮食等级（三级分类）
+     *
+     * @return food_level - 粮食等级（三级分类）
+     */
+    public String getFoodLevel() {
+        return foodLevel;
+    }
+
+    /**
+     * 设置粮食等级（三级分类）
+     *
+     * @param foodLevel 粮食等级（三级分类）
+     */
+    public void setFoodLevel(String foodLevel) {
+        this.foodLevel = foodLevel;
+    }
+
+    /**
+     * 获取粮食含水量
+     *
+     * @return food_watercontent - 粮食含水量
+     */
+    public Integer getFoodWatercontent() {
+        return foodWatercontent;
+    }
+
+    /**
+     * 设置粮食含水量
+     *
+     * @param foodWatercontent 粮食含水量
+     */
+    public void setFoodWatercontent(Integer foodWatercontent) {
+        this.foodWatercontent = foodWatercontent;
+    }
+
+    /**
      * 获取粮食价格
      *
      * @return food_price - 粮食价格
@@ -178,23 +220,5 @@ public class Food {
      */
     public void setFoodPrice(Double foodPrice) {
         this.foodPrice = foodPrice;
-    }
-
-    /**
-     * 获取粮食所属门店
-     *
-     * @return food_store - 粮食所属门店
-     */
-    public String getFoodStore() {
-        return foodStore;
-    }
-
-    /**
-     * 设置粮食所属门店
-     *
-     * @param foodStore 粮食所属门店
-     */
-    public void setFoodStore(String foodStore) {
-        this.foodStore = foodStore;
     }
 }

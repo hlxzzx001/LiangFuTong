@@ -72,6 +72,7 @@
 
 
 
+
     <!-- spring和MyBatis完美整合，不需要mybatis的配置映射文件 -->
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
@@ -82,7 +83,7 @@
 
         <!-- 自动扫描mapping.xml文件 -->
 
-        <property name="mapperLocations" value="classpath:com/LFT/dao/mapper/*.xml"></property>
+        <property name="mapperLocations" value="classpath:com/LFT/mapper/*.xml"></property>
 
 
 
@@ -92,9 +93,14 @@
 
     <!-- DAO接口所在包名，Spring会自动查找其下的类 -->
 
+    <bean class="tk.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.LFT.dao"/>
+        <!-- 其他配置 -->
+    </bean>
+
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 
-        <property name="basePackage" value="com.springmvc.dao" />
+        <property name="basePackage" value="com.LFT.dao" />
 
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
 

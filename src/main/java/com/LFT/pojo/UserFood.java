@@ -32,13 +32,19 @@ public class UserFood {
     private Double userFoodNumber;
 
     /**
-     * 粮食类型
+     * 粮食id
      */
-    @Column(name = "`food_type`")
-    private Integer foodType;
+    @Column(name = "`food_id`")
+    private Integer foodId;
 
     /**
-     * 用户粮食总价格
+     * 粮食类型id
+     */
+    @Column(name = "`food_typeid`")
+    private Integer foodTypeid;
+
+    /**
+     * 当前粮食总价格
      */
     @Column(name = "`user_food_price`")
     private Double userFoodPrice;
@@ -122,36 +128,54 @@ public class UserFood {
     }
 
     /**
-     * 获取粮食类型
+     * 获取粮食id
      *
-     * @return food_type - 粮食类型
+     * @return food_id - 粮食id
      */
-    public Integer getFoodType() {
-        return foodType;
+    public Integer getFoodId() {
+        return foodId;
     }
 
     /**
-     * 设置粮食类型
+     * 设置粮食id
      *
-     * @param foodType 粮食类型
+     * @param foodId 粮食id
      */
-    public void setFoodType(Integer foodType) {
-        this.foodType = foodType;
+    public void setFoodId(Integer foodId) {
+        this.foodId = foodId;
     }
 
     /**
-     * 获取用户粮食总价格
+     * 获取粮食类型id
      *
-     * @return user_food_price - 用户粮食总价格
+     * @return food_typeid - 粮食类型id
+     */
+    public Integer getFoodTypeid() {
+        return foodTypeid;
+    }
+
+    /**
+     * 设置粮食类型id
+     *
+     * @param foodTypeid 粮食类型id
+     */
+    public void setFoodTypeid(Integer foodTypeid) {
+        this.foodTypeid = foodTypeid;
+    }
+
+    /**
+     * 获取当前粮食总价格
+     *
+     * @return user_food_price - 当前粮食总价格
      */
     public Double getUserFoodPrice() {
         return userFoodPrice;
     }
 
     /**
-     * 设置用户粮食总价格
+     * 设置当前粮食总价格
      *
-     * @param userFoodPrice 用户粮食总价格
+     * @param userFoodPrice 当前粮食总价格
      */
     public void setUserFoodPrice(Double userFoodPrice) {
         this.userFoodPrice = userFoodPrice;
