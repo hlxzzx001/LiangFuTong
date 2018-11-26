@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.LFT.dao.mapper.GoodsShopcartItemMapper">
+  <resultMap id="BaseResultMap" type="com.LFT.pojo.GoodsShopcartItem">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="item_id" jdbcType="INTEGER" property="itemId" />
+    <result column="c_id" jdbcType="INTEGER" property="cId" />
+    <result column="product_id" jdbcType="INTEGER" property="productId" />
+    <result column="uid" jdbcType="INTEGER" property="uid" />
+    <result column="products_name" jdbcType="VARCHAR" property="productsName" />
+    <result column="product_price" jdbcType="DOUBLE" property="productPrice" />
+    <result column="product_paytype" jdbcType="VARCHAR" property="productPaytype" />
+    <result column="product_num" jdbcType="INTEGER" property="productNum" />
+    <result column="product_picture" jdbcType="VARCHAR" property="productPicture" />
+    <result column="product_spec" jdbcType="VARCHAR" property="productSpec" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+</mapper>

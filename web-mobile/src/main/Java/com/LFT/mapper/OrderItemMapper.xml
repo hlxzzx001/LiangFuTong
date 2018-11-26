@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.LFT.dao.mapper.OrderItemMapper">
+  <resultMap id="BaseResultMap" type="com.LFT.pojo.OrderItem">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="orderitem_id" jdbcType="VARCHAR" property="orderitemId" />
+    <result column="order_id" jdbcType="VARCHAR" property="orderId" />
+    <result column="product_id" jdbcType="INTEGER" property="productId" />
+    <result column="product_number" jdbcType="INTEGER" property="productNumber" />
+    <result column="product_name" jdbcType="VARCHAR" property="productName" />
+    <result column="product_price" jdbcType="DOUBLE" property="productPrice" />
+    <result column="orderitem_totalmoney" jdbcType="DOUBLE" property="orderitemTotalmoney" />
+    <result column="product_picture" jdbcType="VARCHAR" property="productPicture" />
+    <result column="order_item_pay" jdbcType="VARCHAR" property="orderItemPay" />
+  </resultMap>
+</mapper>
